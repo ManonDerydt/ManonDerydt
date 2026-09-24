@@ -9,12 +9,14 @@ Full-stack developer based in Paris. I design, build and ship SaaS products end 
 - **Raisup** ([raisup.fr](https://www.raisup.fr)): SaaS that turns a startup's numbers into a full fundraising file (score, valuation, business plan, investor deck). Four isolated user spaces, deterministic scoring engine, LLM features behind an authenticated proxy with deterministic guardrails, Stripe payments.
 - **White-label B2B SaaS, regulated sector:** multi-tenant platform where each partner firm gets its own branded space, with per-tenant isolation enforced in PostgreSQL, document generation, scheduled reminders and partner commissions through Stripe Connect.
 
-The source code of these products is private and available on request.
+The source code of these products is private and available on request. The architecture, decisions and trade-offs of Raisup are documented in [raisup-architecture](https://github.com/ManonDerydt/raisup-architecture).
 
 ## Public projects
 
 | Project | What it shows |
 |---|---|
+| [llm-gateway](https://github.com/ManonDerydt/llm-gateway) | LLM calls in production: retries with backoff, fallback across models and providers, circuit breaker, schema-validated output with repair, Langfuse tracing, eval harness in CI |
+| [raisup-architecture](https://github.com/ManonDerydt/raisup-architecture) | Architecture case study of a SaaS in production: 9 decision records, security, data integrity, known debt |
 | [invoicing-next](https://github.com/ManonDerydt/invoicing-next) | Next.js 16 App Router, Server Components and Server Actions, Drizzle + PostgreSQL, Stripe Checkout with an idempotent webhook, 47 tests, CI |
 | [multitenant-billing-api](https://github.com/ManonDerydt/multitenant-billing-api) | NestJS 11 API: organizations, hierarchical roles, tenant isolation guard, JWT auth, Stripe subscriptions, e2e tests on SQLite and PostgreSQL, Docker |
 | [raisup](https://github.com/ManonDerydt/raisup) | Earlier public version of the Raisup front end (React, TypeScript, Vite) |
